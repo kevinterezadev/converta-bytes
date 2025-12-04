@@ -1,0 +1,10 @@
+/* Importando CSS global */
+@import url("../css/global/normalize.css");
+@import url("../css/global/variables.css");
+
+/* Importando CSS das seções/partes */
+@import url("../css/partials/nav.css");
+@import url("../css/partials/hero.css");
+@import url("../css/partials/converter.css");
+@import url("../css/partials/works.css");
+@import url("../css/partials/footer.css");
