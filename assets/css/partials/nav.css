@@ -1,0 +1,111 @@
+.header {
+  position: sticky;
+  top: 0;
+  background: var(--white-color);
+  z-index: 1;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6.25rem;
+  position: sticky;
+  top: 0;
+}
+
+.header__logo {
+  font-family: var(--primary-font);
+  font-size: clamp(1.125em, 3vh, 1.5em);
+  color: var(--red-color);
+}
+
+.header__logo--blue {
+  color: var(--blue-color);
+}
+
+.header__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 6.25rem;
+  padding: 2rem 0;
+  transform: translateX(100%);
+  transition: 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.header__list.active {
+  transform: translateX(0);
+}
+
+.header__link {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: clamp(1em, 2.5vh, 1.5em);
+  padding: 1em;
+  transition: 0.3s ease-in-out;
+}
+
+.header__link:hover {
+  letter-spacing: 2px;
+  color: var(--red-color);
+}
+
+.header__hamburguer {
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 1;
+  padding-block: 1.5rem;
+}
+
+.header__hamburguer-line {
+  display: block;
+  width: 2.5rem;
+  height: 0.313rem;
+  margin-top: 0.438rem;
+  background: var(--black-color);
+  border-radius: 0.625rem;
+  transition: 0.3s;
+}
+
+.header__hamburguer.active .header__hamburguer-line:nth-of-type(1) {
+  transform: translateY(0.75rem) rotate(45deg);
+}
+
+.header__hamburguer.active .header__hamburguer-line:nth-of-type(2) {
+  opacity: 0;
+}
+
+.header__hamburguer.active .header__hamburguer-line:nth-of-type(3) {
+  transform: translateY(-0.75rem) rotate(-45deg);
+}
+
+@media (min-width: 64rem) {
+  .header-content {
+    justify-content: space-between;
+  }
+  .header__list {
+    flex-direction: row;
+    background: none;
+    position: static;
+    transform: translateX(0);
+    gap: 1.125rem;
+  }
+
+  .header__link {
+    padding: 0;
+  }
+
+  .header__hamburguer {
+    display: none;
+  }
+}
