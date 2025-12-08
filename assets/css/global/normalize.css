@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--secondary-font);
+  background-color: var(--white-color);
+  overflow-x: hidden;
+}
+
+.content {
+  max-width: calc(100% - 1.125rem);
+  margin: 0 auto;
+}
+
+@media (min-width: 65rem) {
+  .content {
+    max-width: 64rem;
+  }
+}
