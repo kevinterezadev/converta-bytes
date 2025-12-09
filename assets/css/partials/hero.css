@@ -1,0 +1,50 @@
+.hero {
+  min-height: 85vh;
+  background: rgba(0, 0, 0, 0.7) url("/assets/images/partials/hero/hero.jpg")
+    center/cover no-repeat;
+  background-blend-mode: darken;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  color: var(--white-color);
+  text-align: center;
+}
+
+.hero__title {
+  font-family: var(--primary-font);
+  font-size: clamp(2em, 4vh, 3em);
+}
+
+.hero__text {
+  font-size: clamp(1em, 2.5vh, 1.5em);
+  padding: 0.625rem 0 1.25rem 0;
+}
+
+.hero__btn {
+  font-size: clamp(1em, 2vh, 1.5em);
+  background-color: var(--red-color);
+  padding: 0.625rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  color: var(--white-color);
+  font-weight: bold;
+  display: inline-block;
+}
+
+@media (min-width: 48rem) {
+  .hero__title {
+    font-size: 3em;
+  }
+
+  .hero__text {
+    font-size: 1.5em;
+    max-width: 39rem;
+  }
+
+  .hero__btn {
+    font-size: 1.125em;
+  }
+}
