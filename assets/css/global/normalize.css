@@ -12,6 +12,7 @@
 /* Scroll suave para navegação interna */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 /* Estilos base do corpo */
