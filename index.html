@@ -54,13 +54,95 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-content content">
             <h1 class="hero__title">ConvertaBytes</h1>
             <p class="hero__text">Aprenda como e converta Bytes, KB, MB, GB e TB de forma rápida e intuitiva.</p>
             <a href="#works" class="hero__btn">Converter Agora</a>
         </div>
     </section>
+
+    <main class="conversor" id="conversor">
+        <div class="conversor-content content">
+            <h2 class="conversor__title">Conversor de unidades de armazenamento</h2>
+            <p class="conversor__text">Digite o <b>valor</b>, selecione a <b>unidade</b> e clique em
+                “<b>Calcular</b>”.<br>O resultado aparece automaticamente em todas as outras unidades.</p>
+            <form id="conversor" class="conversor__form">
+                <fieldset class="conversor__fieldset">
+                    <div class="conversor__field">
+                        <label for="value" class="conversor__label">Valor dos dados</label>
+                        <input type="number" id="value" class="conversor__input" placeholder="Ex: 500" required min="1">
+                    </div>
+                    <div class="conversor__field">
+                        <label aria-hidden="true" class="conversor__label--invisible">&nbsp;</label>
+                        <select id="unit" class="conversor__select" required>
+                            <option value="bit">Bit (b)</option>
+                            <option value="byte">Byte (B)</option>
+                            <option value="kb">Kilobyte (KB)</option>
+                            <option value="mb" selected>Megabyte (MB)</option>
+                            <option value="gb">Gigabyte (GB)</option>
+                            <option value="tb">Terabyte (TB)</option>
+                            <option value="pb">Petabyte (PB)</option>
+                            <option value="eb">Exabyte (EB)</option>
+                            <option value="zb">Zettabyte (ZB)</option>
+                            <option value="yb">Yottabyte (YB)</option>
+                        </select>
+                    </div>
+                    <div class="conversor__field">
+                        <label aria-hidden="true" class="conversor__label--invisible">&nbsp;</label>
+                        <input type="submit" value="Calcular" class="conversor__btn">
+                    </div>
+                </fieldset>
+            </form>
+            <h2 class="conversor__subtitle">Resultados</h2>
+            <table class="conversor__table">
+                <tr class="conversor__row">
+                    <th class="conversor__header">Unidade</th>
+                    <th class="conversor__header">Valor</th>
+                </tr>
+                <tr class="conversor__row">
+                    <td class="conversor__cell">Bits (b)</td>
+                    <td class="conversor__cell conversor__cell--value" data-unit="bit">-</td>
+                </tr>
+                <tr class="conversor__row">
+                    <td class="conversor__cell">Bytes (B)</td>
+                    <td class="conversor__cell conversor__cell--value" data-unit="byte">-</td>
+                </tr>
+                <tr class="conversor__row">
+                    <td class="conversor__cell">KiloBytes (KB)</td>
+                    <td class="conversor__cell conversor__cell--value" data-unit="kb">-</td>
+                </tr>
+                <tr class="conversor__row">
+                    <td class="conversor__cell">MegaBytes (MB)</td>
+                    <td class="conversor__cell conversor__cell--value" data-unit="mb">-</td>
+                </tr>
+                <tr class="conversor__row">
+                    <td class="conversor__cell">GigaBytes (GB)</td>
+                    <td class="conversor__cell conversor__cell--value" data-unit="gb">-</td>
+                </tr>
+                <tr class="conversor__row">
+                    <td class="conversor__cell">TeraBytes (TB)</td>
+                    <td class="conversor__cell conversor__cell--value" data-unit="tb">-</td>
+                </tr>
+                <tr class="conversor__row">
+                    <td class="conversor__cell">PetaBytes (PB)</td>
+                    <td class="conversor__cell conversor__cell--value" data-unit="pb">-</td>
+                </tr>
+                <tr class="conversor__row">
+                    <td class="conversor__cell">ExaBytes (EB)</td>
+                    <td class="conversor__cell conversor__cell--value" data-unit="eb">-</td>
+                </tr>
+                <tr class="conversor__row">
+                    <td class="conversor__cell">ZettaBytes (ZB)</td>
+                    <td class="conversor__cell conversor__cell--value" data-unit="zb">-</td>
+                </tr>
+                <tr class="conversor__row">
+                    <td class="conversor__cell">YottaBytes (YB)</td>
+                    <td class="conversor__cell conversor__cell--value" data-unit="yb">-</td>
+                </tr>
+            </table>
+        </div>
+    </main>
 
     <script src="./assets/js/partials/nav/nav.js"></script>
     <script src="./assets/js/partials/converter/converter.js"></script>
