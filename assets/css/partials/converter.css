@@ -52,6 +52,7 @@
   border: 1px solid #ced4da;
   outline: none;
   transition: border 0.3s, box-shadow 0.3s;
+  background-color: var(--white-color);
 }
 
 .conversor__input:focus,
