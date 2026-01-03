@@ -11,11 +11,16 @@
 .conversor__text {
   font-size: clamp(0.625em, 3vh, 1.125em);
   text-align: center;
-  margin-block: 0.625rem;
+  margin-block: 0.625rem 1.875rem;
 }
 
 .conversor__form {
   width: 100%;
+  padding: 1.25rem;
+  background-color: var(--gray-color);
+  margin-block: 1.875rem 3.125rem;
+  border-radius: 5px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 25%);
 }
 
 .conversor__fieldset {
@@ -23,7 +28,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
-  margin-block: 1.875rem 3.125rem;
 }
 
 .conversor__field {
@@ -104,6 +108,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  background-color: var(--gray-color);
 }
 
 .conversor__cell--value {
@@ -113,7 +118,7 @@
 @media (min-width: 48rem) {
   .conversor__form {
     max-width: 80vw;
-    margin: 0.625rem auto;
+    margin: 0.625rem auto 3.125rem auto;
   }
 
   .conversor__fieldset {
