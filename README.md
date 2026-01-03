@@ -12,8 +12,8 @@ Um conversor educacional de unidades de armazenamento baseado no sistema binári
 
 ## 🖼️ Demonstração
 
-![Demonstração do Projeto](caminho/para/imagem.png)
+![Demonstração do Projeto](./assets/images/readme/github-readme.jpg)
 
 ## 🔗 Link para o Deploy
 
-[Acesse o projeto na Vercel](https://link-do-projeto.com)
+[Acesse o projeto na Vercel](https://converta-bytes.vercel.app/)
