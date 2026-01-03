@@ -25,13 +25,26 @@
 
 .hero__btn {
   font-size: clamp(1em, 2vh, 1.5em);
-  background-color: var(--red-color);
-  padding: 0.625rem;
+  background: linear-gradient(135deg, var(--red-color), #c21f1f);
+  padding: 0.625rem 1.25rem;
   border-radius: 1.5rem;
   text-decoration: none;
   color: var(--white-color);
   font-weight: bold;
   display: inline-block;
+
+  transition: all 0.25s ease;
+}
+
+.hero__btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.1);
+}
+
+.hero__btn:active {
+  transform: translateY(-1px) scale(0.99);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 48rem) {
