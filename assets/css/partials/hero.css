@@ -1,3 +1,7 @@
+/* ==============================
+   HERO SECTION
+   ============================== */
+
 .hero {
   min-height: 85vh;
   background: rgba(0, 0, 0, 0.7) url("/assets/images/partials/hero/hero.jpg")
@@ -13,6 +17,10 @@
   text-align: center;
 }
 
+/* ==============================
+   TÍTULO E TEXTO
+   ============================== */
+
 .hero__title {
   font-family: var(--primary-font);
   font-size: clamp(2em, 4vh, 3em);
@@ -23,6 +31,10 @@
   padding: 0.625rem 0 1.25rem 0;
 }
 
+/* ==============================
+   BOTÃO PRINCIPAL
+   ============================== */
+
 .hero__btn {
   font-size: clamp(1em, 2vh, 1.5em);
   background: linear-gradient(135deg, var(--red-color), #c21f1f);
@@ -32,9 +44,12 @@
   color: var(--white-color);
   font-weight: bold;
   display: inline-block;
-
   transition: all 0.25s ease;
 }
+
+/* ==============================
+   ESTADOS DO BOTÃO
+   ============================== */
 
 .hero__btn:hover {
   transform: translateY(-4px) scale(1.02);
@@ -46,6 +61,10 @@
   transform: translateY(-1px) scale(0.99);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* ==============================
+   MEDIA QUERIES - TABLET/DESKTOP
+   ============================== */
 
 @media (min-width: 48rem) {
   .hero__title {

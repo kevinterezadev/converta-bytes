@@ -1,7 +1,17 @@
+/* ==============================
+   VARIÁVEIS GLOBAIS
+   ============================== */
+
 :root {
+  /* ==============================
+     TIPOGRAFIA
+     ============================== */
   --primary-font: "Montserrat", sans-serif;
   --secondary-font: "Inter", sans-serif;
 
+  /* ==============================
+     PALETA DE CORES
+     ============================== */
   --red-color: #d0202e;
   --blue-color: #1f2c6c;
   --white-color: #fafafa;

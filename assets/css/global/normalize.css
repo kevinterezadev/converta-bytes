@@ -1,13 +1,20 @@
+/* ==============================
+   RESET & BASE STYLES
+   ============================== */
+
+/* Reset universal para remover margens, paddings e aplicar box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Scroll suave para navegação interna */
 html {
   scroll-behavior: smooth;
 }
 
+/* Estilos base do corpo */
 body {
   font-family: var(--secondary-font);
   background-color: var(--white-color);
@@ -15,13 +22,25 @@ body {
   color: var(--black-color);
 }
 
+/* ==============================
+   LAYOUT CONTAINER
+   ============================== */
+
+/* Container principal para centralização responsiva */
 .content {
-  max-width: calc(100% - 1.125rem);
+  max-width: calc(
+    100% - 1.125rem
+  ); /* 18px de padding lateral em telas pequenas */
   margin: 0 auto;
 }
 
+/* ==============================
+   MEDIA QUERIES
+   ============================== */
+
+/* Desktop - Limita largura máxima em 64rem (1024px) */
 @media (min-width: 65rem) {
   .content {
-    max-width: 64rem;
+    max-width: 64rem; /* 1024px */
   }
 }
