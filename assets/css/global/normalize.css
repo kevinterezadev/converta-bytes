@@ -12,6 +12,7 @@ body {
   font-family: var(--secondary-font);
   background-color: var(--white-color);
   overflow-x: hidden;
+  color: var(--black-color);
 }
 
 .content {
