@@ -36,6 +36,9 @@
 
 <body>
 
+    <!-- ==============================
+         Header / Navegação
+         ============================== -->
     <header class="header">
         <div class="header-content content">
             <h1 class="header__logo">Converta<span class="header__logo--blue">Bytes</span></h1>
@@ -54,6 +57,9 @@
         </div>
     </header>
 
+    <!-- ==============================
+         Hero Section
+         ============================== -->
     <section class="hero" id="home">
         <div class="hero-content content">
             <h1 class="hero__title">ConvertaBytes</h1>
@@ -62,6 +68,9 @@
         </div>
     </section>
 
+    <!-- ==============================
+         Conversor Section
+         ============================== -->
     <main class="conversor" id="conversor">
         <div class="conversor-content content">
             <h2 class="conversor__title">Conversor de unidades de armazenamento</h2>
@@ -143,52 +152,68 @@
             </table>
         </div>
     </main>
+
+    <!-- ==============================
+         Works Section
+         ============================== -->
     <section class="works" id="works">
         <div class="works-content content">
             <h2 class="works__title">Como funciona a conversão de unidades?</h2>
+
+            <!-- ==============================
+             Artigo 1 - Sistema Binário
+             ============================== -->
             <article class="works__wrapper">
                 <div class="works__content">
                     <h3 class="works__subtitle">O sistema binário</h3>
                     <p class="works__text">
                         Computadores trabalham apenas com <b>0</b> e <b>1</b>, o <b>sistema binário</b>. Por isso, as
-                        medidas
-                        de
-                        armazenamento seguem <b>potências de 2</b>, e não de 10 como no sistema decimal que usamos no
-                        dia a
-                        dia.
-                        É daqui que surge o número 1024, pois: <b>1024 = 2¹⁰</b>. Ou seja, cada unidade (KB, MB, GB…) é
-                        <b>1024
-                            vezes</b> maior que a anterior porque elas seguem a potência de 2¹⁰, e não a potência de 10.
+                        medidas de armazenamento seguem <b>potências de 2</b>, e não de 10 como no sistema decimal que
+                        usamos no
+                        dia a dia. É daqui que surge o número 1024, pois: <b>1024 = 2¹⁰</b>. Ou seja, cada unidade (KB,
+                        MB, GB…) é
+                        <b>1024 vezes</b> maior que a anterior porque elas seguem a potência de 2¹⁰, e não a potência de
+                        10.
                     </p>
                 </div>
                 <img src="./assets/images/partials/works/computer.svg" alt="Ilustração de um monitor"
                     class="works__img">
             </article>
+
+            <!-- ==============================
+             Artigo 2 - Cálculo do Sistema
+             ============================== -->
             <article class="works__wrapper">
                 <div class="works__content">
                     <h3 class="works__subtitle">Como o sistema faz o cálculo?</h3>
                     <p class="works__text">O sistema recebe o <b>valor</b> digitado, identifica a <b>unidade</b>
-                        escolhida e primeiro
-                        transforma tudo em <b>bytes</b>, que é a base das medidas de armazenamento usadas no dia a dia.
-                        A
-                        partir daí, ele aplica a lógica binária, <b>dividindo ou multiplicando por 1024</b> para gerar
-                        KB, MB,
-                        GB e etc. Para mostrar o valor em bits, o <b>programa apenas multiplica os bytes por 8</b>.
-                        Assim,
-                        todas as conversões são calculadas de forma rápida, organizada e precisa.</p>
+                        escolhida e primeiro transforma tudo em <b>bytes</b>, que é a base das medidas de armazenamento
+                        usadas no dia a dia.
+                        A partir daí, ele aplica a lógica binária, <b>dividindo ou multiplicando por 1024</b> para gerar
+                        KB, MB, GB e etc. Para mostrar o valor em bits, o <b>programa apenas multiplica os bytes por
+                            8</b>.
+                        Assim, todas as conversões são calculadas de forma rápida, organizada e precisa.</p>
                 </div>
                 <img src="./assets/images/partials/works/calculator.svg" alt="Ilustração de uma calculadora"
                     class="works__img">
             </article>
+
             <img src="./assets/images/partials/works/conversion.svg" alt="Guia visual de como realizar o cálculo"
                 class="works__guide">
         </div>
     </section>
+
+    <!-- ==============================
+         Footer
+         ============================== -->
     <footer class="footer content">
         <p class="footer__text">© 2026 ConvertaBytes — Desenvolvido por <a href="https://kevinterezadev.vercel.app/"
                 class="footer__link">Kevin Tereza</a></p>
     </footer>
 
+    <!-- ==============================
+         Scripts
+         ============================== -->
     <script src="./assets/js/partials/nav/nav.js"></script>
     <script src="./assets/js/partials/converter/converter.js"></script>
 </body>
