@@ -1,0 +1,15 @@
+.footer {
+  text-align: center;
+  padding: 1.625rem;
+}
+
+.footer__link {
+  font-family: var(--primary-font);
+  color: var(--black-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
