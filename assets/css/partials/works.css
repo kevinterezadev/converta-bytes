@@ -10,6 +10,7 @@
 .works__wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
   margin-bottom: 3.125rem;
 }
@@ -43,7 +44,8 @@
    ============================== */
 
 .works__img {
-  max-width: 80%;
+  max-width: 45%;
+  max-height: 50vh;
   margin: 0 auto;
 }
 
@@ -59,7 +61,12 @@
 @media (min-width: 48rem) {
   .works__wrapper {
     max-width: 80vw;
+    flex-direction: row;
     margin-inline: auto;
+  }
+
+  .works__wrapper:nth-of-type(2) {
+    flex-direction: row-reverse;
   }
 
   .works__guide {
@@ -78,7 +85,7 @@
   }
 
   .works__content {
-    max-width: 50%;
+    width: 40%;
   }
 
   .works__guide {
