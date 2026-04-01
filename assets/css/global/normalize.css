@@ -18,9 +18,9 @@ html {
 /* Estilos base do corpo */
 body {
   font-family: var(--secondary-font);
-  background-color: var(--white-color);
+  background-color: var(--main-bg-color);
   overflow-x: hidden;
-  color: var(--black-color);
+  color: var(--main-txt-color);
 }
 
 /* ==============================
@@ -39,9 +39,9 @@ body {
    MEDIA QUERIES
    ============================== */
 
-/* Desktop - Limita largura máxima em 64rem (1024px) */
-@media (min-width: 65rem) {
+/* Desktop - Limita largura máxima em 80rem (1280px) */
+@media (min-width: 81rem) {
   .content {
-    max-width: 64rem; /* 1024px */
+    max-width: 80rem; /* 1280px */
   }
 }
