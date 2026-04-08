@@ -14,13 +14,13 @@
      PALETA DE CORES
      ============================== */
   --primary-color: #2563eb;
-  --secundary-color: #06b6d4;
-  --highlight-color: #7c3aed;
+  --secondary-color: #06b6d4;
+  --accent-color: #7c3aed;
   --gradient-color: linear-gradient(
     135deg,
-    var(--color-primary) 0%,
-    var(--color-secondary) 50%,
-    var(--color-accent) 100%
+    var(--primary-color) 0%,
+    var(--secondary-color) 50%,
+    var(--accent-color) 100%
   );
   --main-bg-color: #0f172a;
   --sections-bg-color: #1e293b;
