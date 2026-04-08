@@ -1,82 +1,145 @@
 /* ==============================
    HERO SECTION
    ============================== */
-
 .hero {
-  min-height: 85vh;
-  background: rgba(0, 0, 0, 0.7) url("/assets/images/partials/hero/hero.jpg")
-    center/cover no-repeat;
-  background-blend-mode: darken;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 40vw; /* Respiro para o header fixo */
+  overflow: hidden;
+  background: var(--main-bg-color); /* Fundo sólido para destacar o 3D */
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column; /* Mobile: um embaixo do outro */
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* ==============================
+   BLOCO 1: TEXTO E CONTEÚDO
+   ============================== */
+.hero__content {
+  color: var(--main-txt-color);
+  text-align: center;
+  z-index: 2;
+  flex: 1;
+}
+
+.hero__title {
+  font-family: var(--primary-font);
+  font-size: clamp(2rem, 8vw, 4rem); /* Maior e mais impactante */
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+/* ==============================
+   BOTÃO PRINCIPAL (Estilizado)
+   ============================== */
+.hero__btn {
+  font-size: 1.125rem;
+  background: var(--gradient-color);
+  padding: 1rem 2.5rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  position: relative; /* Necessário para o efeito interno */
+  overflow: hidden; /* Esconde o brilho que sai das bordas */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 15px rgba(37, 99, 235, 0.2);
+  margin-top: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* O "Brilho" que passa pelo botão */
+.hero__btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: all 0.6s;
+}
+
+.hero__btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.5); /* Glow mais forte */
+  letter-spacing: 1px; /* Dá uma leve expandida no texto */
+}
+
+/* Dispara o brilho no hover */
+.hero__btn:hover::before {
+  left: 100%;
+}
+
+.hero__btn:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+/* ==============================
+   BLOCO 2: ELEMENTO 3D (Spline)
+   ============================== */
+.hero__visual {
+  flex: 1;
+  width: 100%;
+  height: 450px; /* Altura para o robô no mobile */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.hero-content {
-  color: var(--white-color);
-  text-align: center;
+.robot-3d {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* ==============================
-   TÍTULO E TEXTO
+   MEDIA QUERIES - TABLET
    ============================== */
-
-.hero__title {
-  font-family: var(--primary-font);
-  font-size: clamp(2em, 4vh, 3em);
-}
-
-.hero__text {
-  font-size: clamp(1em, 2.5vh, 1.5em);
-  padding: 0.625rem 0 1.25rem 0;
-}
-
-/* ==============================
-   BOTÃO PRINCIPAL
-   ============================== */
-
-.hero__btn {
-  font-size: clamp(1em, 2vh, 1.5em);
-  background: linear-gradient(135deg, var(--red-color), #c21f1f);
-  padding: 0.625rem 1.25rem;
-  border-radius: 1.5rem;
-  text-decoration: none;
-  color: var(--white-color);
-  font-weight: bold;
-  display: inline-block;
-  transition: all 0.25s ease;
-}
-
-/* ==============================
-   ESTADOS DO BOTÃO
-   ============================== */
-
-.hero__btn:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-  filter: brightness(1.1);
-}
-
-.hero__btn:active {
-  transform: translateY(-1px) scale(0.99);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* ==============================
-   MEDIA QUERIES - TABLET/DESKTOP
-   ============================== */
-
 @media (min-width: 48rem) {
+  .hero {
+    padding-top: 5rem;
+  }
+
   .hero__title {
-    font-size: 3em;
+    font-size: clamp(2.5rem, 2rem + 4vw, 3.5rem);
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* ==============================
+   MEDIA QUERIES - DESKTOP
+   ============================== */
+@media (min-width: 64rem) {
+  .hero-container {
+    flex-direction: row; /* Lado a lado no desktop */
+    text-align: left;
+    gap: 4rem;
   }
 
-  .hero__text {
-    font-size: 1.5em;
-    max-width: 39rem;
+  .hero__content {
+    text-align: left;
+    padding-left: 2rem;
   }
 
-  .hero__btn {
-    font-size: 1.125em;
+  .hero__title {
+    width: 100%;
+  }
+
+  .hero__visual {
+    height: 650px; /* Robô ganha mais presença */
   }
 }
