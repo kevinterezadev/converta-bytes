@@ -151,11 +151,11 @@
     opacity: 1;
     visibility: visible;
     flex-direction: row;
-    gap: 6pxrem;
+    gap: 1.5rem;
     backdrop-filter: none;
   }
 
   .header__link {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
