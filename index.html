@@ -42,12 +42,17 @@
          ============================== -->
     <header class="header">
         <div class="header-content content">
-            <h1 class="header__logo">Converta<span class="header__logo--blue">Bytes</span></h1>
+            <div class="header__brand">
+                <img src="./assets/images/logo.svg" class="header__icon" aria-hidden="true">
+                <h1 class="header__logo">ConvertaBytes</h1>
+            </div>
             <nav>
                 <ul class="header__list" id="nav-list">
                     <li class="header__item"><a href="#home" class="header__link">Início</a></li>
                     <li class="header__item"><a href="#conversor" class="header__link">Conversor</a></li>
-                    <li class="header__item"><a href="#works" class="header__link">Como funciona?</a></li>
+                    <li class="header__item"><a href="#works" class="header__link">Como funciona a conversão?</a></li>
+                    <li class="header__item"><a href="#works" class="header__link">Bit, Byte e Sistema Binário</a></li>
+                    <li class="header__item"><a href="#works" class="header__link">Sobre o projeto</a></li>
                 </ul>
             </nav>
             <button class="header__hamburguer" id="hamburguer" aria-label="Abrir menu">
@@ -61,13 +66,7 @@
     <!-- ==============================
          Hero Section
          ============================== -->
-    <section class="hero" id="home">
-        <div class="hero-content content">
-            <h1 class="hero__title">ConvertaBytes</h1>
-            <p class="hero__text">Aprenda como e converta Bytes, KB, MB, GB e TB de forma rápida e intuitiva.</p>
-            <a href="#conversor" class="hero__btn">Converter Agora</a>
-        </div>
-    </section>
+
 
     <!-- ==============================
          Conversor Section
@@ -215,6 +214,7 @@
     <!-- ==============================
          Scripts
          ============================== -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.77/build/spline-viewer.js"></script>
     <script src="./assets/js/partials/nav/nav.js"></script>
     <script src="./assets/js/partials/converter/converter.js"></script>
 </body>
