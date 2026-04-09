@@ -26,7 +26,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 5rem;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
 }
 
 .educational__wrapper:nth-child(even) {
@@ -52,24 +52,24 @@
 }
 
 .educational__img {
-  width: 300px;
+  width: 200px;
   height: auto;
   transition: 0.7s ease;
 }
 
-.educational__img:hover {
+.educational__img--byte {
+  width: 400px;
+}
+
+.educational__wrapper:hover .educational__img {
   transform: translateY(-10px) scale(1.1);
   filter: drop-shadow(0 0 40px var(--primary-color));
 }
 
 @media (max-width: 48rem) {
-  .educational__wrapper, 
+  .educational__wrapper,
   .educational__wrapper:nth-child(even) {
     flex-direction: column;
-    text-align: center;
-    gap: 3rem;
-  }
-  .educational__img {
-    width: 200px;
+    gap: 1rem;
   }
 }
