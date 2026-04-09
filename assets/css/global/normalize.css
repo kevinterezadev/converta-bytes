@@ -45,3 +45,8 @@ body {
     max-width: 80rem; /* 1280px */
   }
 }
+
+
+b {
+  color: var(--main-txt-color);
+}

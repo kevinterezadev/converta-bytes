@@ -193,50 +193,55 @@
     <!-- ==============================
          Works Section
          ============================== -->
-    <section class="works" id="works">
-        <div class="works-content content">
-            <h2 class="works__title">Como funciona a conversão de unidades?</h2>
+    <section class="educational" id="educational">
+        <div class="educational-content content">
+            <section id="educational" class="educational">
+    <div class="educational__container">
+        <h2 class="educational__title">Sistema Binário, Bit e Byte</h2>
 
-            <!-- ==============================
-             Artigo 1 - Sistema Binário
-             ============================== -->
-            <article class="works__wrapper">
-                <div class="works__content">
-                    <h3 class="works__subtitle">O sistema binário</h3>
-                    <p class="works__text">
-                        Computadores trabalham apenas com <b>0</b> e <b>1</b>, o <b>sistema binário</b>. Por isso, as
-                        medidas de armazenamento seguem <b>potências de 2</b>, e não de 10 como no sistema decimal que
-                        usamos no
-                        dia a dia. É daqui que surge o número 1024, pois: <b>1024 = 2¹⁰</b>. Ou seja, cada unidade (KB,
-                        MB, GB…) é
-                        <b>1024 vezes</b> maior que a anterior porque elas seguem a potência de 2¹⁰, e não a potência de
-                        10.
-                    </p>
-                </div>
-                <img src="./assets/images/partials/works/math.svg" alt="Ilustração de um estudante de exatas"
-                    class="works__img">
-            </article>
+        <article class="educational__wrapper">
+            <div class="educational__content">
+                <h3 class="educational__subtitle">1. O Sistema Binário: A Linguagem Elétrica</h3>
+                <p class="educational__text">
+                    No nível mais fundamental, o processador de um computador é composto por bilhões de micro-interruptores chamados <b>transistores</b>. Como um interruptor de luz, eles só possuem dois estados físicos: <b>ligado</b> ou <b>desligado</b>.
+                </p>
+                <p class="educational__text">
+                    Para traduzir isso em dados, atribuímos o valor <b>1</b> para a presença de eletricidade e <b>0</b> para a ausência. Enquanto nós usamos o sistema decimal (base 10), as máquinas utilizam a <b>Base 2</b>. Toda imagem, vídeo ou som que você vê na tela é, no fundo, uma sequência astronômica desses dois dígitos.
+                </p>
+            </div>
+            <img src="./assets/images/partials/educational/binary-code.svg" alt="Representação de código binário" class="educational__img">
+        </article>
 
-            <!-- ==============================
-             Artigo 2 - Cálculo do Sistema
-             ============================== -->
-            <article class="works__wrapper">
-                <div class="works__content">
-                    <h3 class="works__subtitle">Como o sistema faz o cálculo?</h3>
-                    <p class="works__text">O sistema recebe o <b>valor</b> digitado, identifica a <b>unidade</b>
-                        escolhida e primeiro transforma tudo em <b>bytes</b>, que é a base das medidas de armazenamento
-                        usadas no dia a dia.
-                        A partir daí, ele aplica a lógica binária, <b>dividindo ou multiplicando por 1024</b> para gerar
-                        KB, MB, GB e etc. Para mostrar o valor em bits, o <b>programa apenas multiplica os bytes por
-                            8</b>.
-                        Assim, todas as conversões são calculadas de forma rápida, organizada e precisa.</p>
-                </div>
-                <img src="./assets/images/partials/works/system.svg" alt="Ilustração de um usuário de computador"
-                    class="works__img">
-            </article>
+        <article class="educational__wrapper">
+            <div class="educational__content">
+                <h3 class="educational__subtitle">2. Bit vs Byte: Átomos e Moléculas</h3>
+                <p class="educational__text">
+                    O <b>Bit</b> (Binary Digit) é a unidade mínima de informação — um único 0 ou 1. Sozinho, um bit não consegue representar muita coisa. Por isso, a arquitetura moderna agrupa bits em conjuntos de 8.
+                </p>
+                <p class="educational__text">
+                    Um <b>Byte</b> é um grupo de <b>8 bits</b>. Esse agrupamento de 8 posições permite 256 combinações diferentes ($2^8$), o que foi historicamente suficiente para mapear todos os caracteres essenciais (letras, números e símbolos). 
+                </p>
+            </div>
+            <img src="./assets/images/partials/educational/bit-byte.svg" alt="Esquema de 8 bits formando um byte" class="educational__img">
+        </article>
 
-            <img src="./assets/images/partials/works/conversion.svg" alt="Guia visual de como realizar o cálculo"
-                class="works__guide">
+        <article class="educational__wrapper">
+            <div class="educational__content">
+                <h3 class="educational__subtitle">3. O Enigma do 1024: Decimal vs. Binário</h3>
+                <p class="educational__text">
+                    No nosso cotidiano, utilizamos o sistema métrico decimal, onde os prefixos <i>Kilo</i>, <i>Mega</i> e <i>Giga</i> representam potências de 10 (ex: 1 km = 10³ metros = 1000m). No entanto, na arquitetura de computadores, as memórias são endereçadas através de <b>potências de 2</b>.
+                </p>
+                <p class="educational__text">
+                    A potência $2^{10}$ resulta em <b>1024</b>, que é o valor binário mais próximo de 1000. Por uma questão de conveniência histórica e técnica, a indústria adotou o termo "Kilobyte" para descrever esse bloco de 1024 unidades. Essa diferença de 24 unidades pode parecer irrelevante no início, mas ela se acumula exponencialmente conforme subimos na escala.
+                </p>
+                <p class="educational__text">
+                    É por isso que existe a clássica confusão de armazenamento: enquanto os fabricantes de HDs vendem um produto de 500 GB (calculando como 500 bilhões de bytes), o sistema operacional — que pensa de forma puramente binária — divide esse valor por $1024^3$, resultando em cerca de 465 GiB. Você não "perdeu" espaço; seu computador apenas utiliza uma <b>régua de medição diferente</b>.
+                </p>
+            </div>
+            <img src="./assets/images/partials/educational/math.svg" alt="Tabela de potências de base 2" class="educational__img">
+        </article>
+    </div>
+</section>
         </div>
     </section>
 
