@@ -1,233 +1,266 @@
-/* ==============================
-   CONVERSOR SECTION
-   ============================== */
-
 .conversor {
-  padding: 3.125rem 0;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--sections-bg-color);
+  font-family: var(--secondary-font);
 }
 
 .conversor__title {
-  font-size: clamp(1.25em, 4vh, 2.25em);
+  font-size: 2rem;
+  color: var(--main-txt-color);
   text-align: center;
-  color: var(--blue-color);
+  margin-bottom: 0.5rem;
+  font-family: var(--primary-font);
 }
 
 .conversor__text {
-  font-size: clamp(0.625em, 3vh, 1.125em);
+  color: #94a3b8;
   text-align: center;
-  margin-block: 0.625rem 1.875rem;
+  margin-bottom: 3rem;
 }
 
-/* ==============================
-   FORMULÁRIO DO CONVERSOR
-   ============================== */
-
 .conversor__form {
-  width: 100%;
-  padding: 1.25rem;
-  background-color: var(--gray-color);
-  margin-block: 1.875rem 3.125rem;
-  border-radius: 5px;
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 25%);
+  position: relative;
+  width: min(100%, 850px);
+  padding: 3px;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background: transparent;
+}
+
+.conversor__form::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 20%,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--accent-color),
+    transparent 80%
+  );
+  animation: rotate-border 4s linear infinite;
+  z-index: -2;
+}
+
+.conversor__form::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: var(--main-bg-color);
+  border-radius: calc(2rem - 3px);
+  z-index: -1;
+}
+
+@keyframes rotate-border {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .conversor__fieldset {
   border: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
+  width: 100%;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  z-index: 1;
 }
 
 .conversor__field {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
-
-/* ==============================
-   LABELS E INPUTS
-   ============================== */
 
 .conversor__label {
-  display: block;
-  font-family: var(--primary-font);
-  font-size: 1.125em;
-  font-weight: bold;
-  margin-bottom: 0.25rem;
-}
-
-.conversor__label--invisible {
-  display: none;
-  margin-bottom: 0.25rem;
+  color: var(--main-txt-color);
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .conversor__input,
 .conversor__select {
-  width: 100%;
-  padding: 1rem 0.625rem;
-  font-size: 1em;
-  border: 1px solid #ced4da;
+  background: #ffffff0d;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 0.8rem;
+  color: #fff;
   outline: none;
-  transition: border 0.3s, box-shadow 0.3s;
-  background-color: var(--white-color);
+  transition: border 0.3s;
 }
 
 .conversor__input:focus,
 .conversor__select:focus {
-  border-color: var(--blue-color);
-  box-shadow: 0 0 4px var(--blue-color);
+  border-color: var(--secondary-color);
 }
 
-/* ==============================
-   BOTÃO DE CALCULAR
-   ============================== */
+.conversor__select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #ffffff0d;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.conversor__select option {
+  background-color: #1e293b;
+  color: #fff;
+  padding: 10px;
+}
+
+.conversor__select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2);
+}
 
 .conversor__btn {
-  width: 100%;
-  padding: 1rem;
-  font-size: clamp(1em, 3vh, 1.25em);
-  background-color: var(--blue-color);
-  border-radius: 5px;
+  background: var(--gradient-color);
+  color: #fff;
   border: none;
+  padding: 1rem;
+  border-radius: 0.8rem;
   font-weight: bold;
-  color: var(--white-color);
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition:
+    transform 0.3s,
+    filter 0.3s;
 }
 
 .conversor__btn:hover {
-  filter: brightness(1.1);
-  background-color: #2b3d97;
+  filter: brightness(1.2);
+  transform: translateY(-2px);
 }
 
-.conversor__btn:active {
-  transform: translateY(2px) scale(0.98);
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.25);
-  filter: brightness(0.95);
+@media (min-width: 48rem) {
+  .conversor__fieldset {
+    grid-template-columns: 2fr 1.5fr 1fr;
+    align-items: flex-end;
+  }
 }
-
-.conversor__btn:focus-visible {
-  outline: 3px solid rgba(255, 255, 255, 0.6);
-  outline-offset: 2px;
-}
-
-/* ==============================
-   TABELA DE RESULTADOS
-   ============================== */
 
 .conversor__subtitle {
-  font-size: clamp(1.25em, 3vh, 1.5em);
   font-family: var(--primary-font);
-  color: var(--black-color);
-  margin-bottom: 0.625rem;
+  font-size: 1.75rem;
+  color: var(--main-txt-color);
+  margin: 4rem auto 1.5rem;
+  width: fit-content;
 }
 
 .conversor__table {
-  border: 0.5px solid var(--black-color);
-  width: 100%;
-  border-collapse: collapse;
+  width: min(100%, 850px);
+  margin: 0 auto;
+  border-collapse: separate;
   border-spacing: 0;
-  table-layout: fixed;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.conversor__row:first-child {
+  background: #2564eb64;
 }
 
 .conversor__header {
   padding: 1.25rem;
-  color: var(--black-color);
-  border: 0.5px solid var(--black-color);
-  background-color: #99aaff;
-  font-size: clamp(1em, 3vh, 1.125em);
+  text-align: left;
+  color: var(--main-txt-color);
+  font-family: var(--primary-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.conversor__cell,
-.conversor__value {
-  border: 0.5px solid var(--black-color);
-  padding: 0.625rem;
-  font-size: 0.875em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background-color: var(--gray-color);
-}
-
-.conversor__cell--value {
+.conversor__header:nth-of-type(2) {
   text-align: right;
 }
 
-/* ==============================
-   MEDIA QUERIES - TABLET
-   ============================== */
+.conversor__cell {
+  padding: 1rem 1.25rem;
+  color: #94a3b8;
+  font-family: var(--secondary-font);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
 
-@media (min-width: 48rem) {
-  .conversor__form {
-    max-width: 80vw;
-    margin: 0.625rem auto 3.125rem auto;
-  }
+.conversor__cell--value {
+  color: #fff;
+  font-family: var(--numbers-font);
+  font-weight: 500;
+  text-align: right;
+}
 
-  .conversor__fieldset {
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 0.75rem;
-  }
+.conversor__row:not(:first-child):hover {
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease;
+}
 
-  .conversor__field:nth-child(1),
-  .conversor__field:nth-child(2) {
-    flex: 1;
-  }
+.conversor__row:last-child .conversor__cell {
+  border-bottom: none;
+}
 
-  .conversor__btn {
-    white-space: nowrap;
-  }
-
-  .conversor__subtitle,
-  .conversor__table {
-    max-width: 85vw;
-    margin: 0 auto;
-  }
-
-  .conversor__cell,
-  .conversor__value {
-    font-size: 1.25em;
-  }
-
-  .conversor__header:first-child,
-  .conversor__cell:first-child {
-    width: 40%;
-    text-align: center;
-  }
-
-  .conversor__header:last-child,
-  .conversor__cell--value {
-    width: 60%;
+@media (max-width: 480px) {
+  .conversor__header,
+  .conversor__cell {
+    padding: 0.75rem;
+    font-size: 0.9rem;
   }
 }
 
-/* ==============================
-   MEDIA QUERIES - DESKTOP
-   ============================== */
+.equivalence {
+  width: min(100%, 850px);
+  margin: 3rem auto 0;
+}
 
-@media (min-width: 64rem) {
-  .conversor__form,
-  .conversor__table {
-    max-width: 90%;
-  }
+.equivalence__title {
+  margin-bottom: 1rem;
+}
 
-  .conversor__subtitle {
-    max-width: 90%;
-    margin: 0.625rem auto;
-  }
+.equivalence__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
 
-  .conversor__cell,
-  .conversor__value {
-    font-size: 1.125em;
-  }
+.equivalence__card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+}
 
-  .conversor__header:first-child,
-  .conversor__cell:first-child {
-    width: 50%;
-  }
+.equivalence__value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--secondary-color);
+  margin-top: 0.5rem;
+}
 
-  .conversor__header:last-child,
-  .conversor__cell--value {
-    width: 50%;
-    text-align: right;
+@media (min-width: 48rem) {
+  .converter__fieldset {
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: flex-end;
   }
 }

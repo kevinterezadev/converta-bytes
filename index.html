@@ -88,16 +88,21 @@
         <div class="conversor-content content">
             <h2 class="conversor__title">Conversor de unidades de armazenamento</h2>
             <p class="conversor__text">Digite o <b>valor</b>, selecione a <b>unidade</b> e clique em
-                “<b>Calcular</b>”.<br>O resultado aparece automaticamente em todas as outras unidades.</p>
-            <form id="conversor" class="conversor__form">
+                <b>“Calcular”</b>.<br>
+                O resultado aparece automaticamente em todas as outras unidades.
+            </p>
+
+            <form id="conversor-form" class="conversor__form">
                 <fieldset class="conversor__fieldset">
+
                     <div class="conversor__field">
-                        <label for="value" class="conversor__label">Valor dos dados</label>
-                        <input type="number" id="value" class="conversor__input" placeholder="Ex: 500" required min="1">
+                        <label for="value" class="conversor__label">Valor</label>
+                        <input type="number" id="value" class="conversor__input" placeholder="Ex: 512" required>
                     </div>
+
                     <div class="conversor__field">
-                        <label aria-hidden="true" class="conversor__label--invisible">&nbsp;</label>
-                        <select id="unit" class="conversor__select" required>
+                        <label for="unit" class="conversor__label">De:</label>
+                        <select id="unit" class="conversor__select">
                             <option value="bit">Bit (b)</option>
                             <option value="byte">Byte (B)</option>
                             <option value="kb">Kilobyte (KB)</option>
@@ -110,10 +115,12 @@
                             <option value="yb">Yottabyte (YB)</option>
                         </select>
                     </div>
+
                     <div class="conversor__field">
-                        <label aria-hidden="true" class="conversor__label--invisible">&nbsp;</label>
-                        <input type="submit" value="Calcular" class="conversor__btn">
+                        <label class="conversor__label" style="opacity:0; pointer-events:none;">&nbsp;</label>
+                        <button type="submit" class="conversor__btn">Calcular</button>
                     </div>
+
                 </fieldset>
             </form>
             <h2 class="conversor__subtitle">Resultados</h2>
@@ -163,6 +170,23 @@
                     <td class="conversor__cell conversor__cell--value" data-unit="yb">-</td>
                 </tr>
             </table>
+            <div class="equivalence">
+                <h3 class="equivalence__title">O que são <span id="equivalence__title--data">0 MB</span>?</h3>
+                <div class="equivalence__grid">
+                    <div class="equivalence__card">
+                        <span class="equivalence__label">Fotos (8MP)</span>
+                        <p class="equivalence__value" data-equiv="photos">0</p>
+                    </div>
+                    <div class="equivalence__card">
+                        <span class="equivalence__label">Músicas (MP3)</span>
+                        <p class="equivalence__value" data-equiv="songs">0</p>
+                    </div>
+                    <div class="equivalence__card">
+                        <span class="equivalence__label">Videos (Full HD)</span>
+                        <p class="equivalence__value" data-equiv="videos">0</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
