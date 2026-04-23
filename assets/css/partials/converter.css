@@ -224,7 +224,7 @@
 
 .equivalence__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(minmax(200px, 1fr));
   gap: 1.5rem;
 }
 
@@ -252,6 +252,10 @@
 }
 
 @media (min-width: 48rem) {
+  .equivalence__grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
   .conversor__fieldset {
     grid-template-columns: 2fr 1fr 1fr;
     align-items: flex-end;
