@@ -73,8 +73,7 @@
         <div class="conversor-content content">
             <h2 class="conversor__title">Conversor de unidades de armazenamento</h2>
             <p class="conversor__text">Digite o <b>valor</b>, selecione a <b>unidade</b> e clique em
-                <b>“Calcular”</b>.<br>
-                O resultado aparece automaticamente em todas as outras unidades.
+                <b>“Calcular”</b>. O resultado aparece automaticamente em todas as outras unidades.
             </p>
 
             <form id="conversor-form" class="conversor__form">
@@ -82,7 +81,7 @@
 
                     <div class="conversor__field">
                         <label for="value" class="conversor__label">Valor</label>
-                        <input type="number" id="value" class="conversor__input" placeholder="Ex: 512" required>
+                        <input type="number" id="value" class="conversor__input" placeholder="Ex: 512" min="1" required>
                     </div>
 
                     <div class="conversor__field">
@@ -175,77 +174,75 @@
         </div>
     </main>
 
-    <section class="educational" id="educational">
-        <div class="educational-content content">
-            <section id="educational" class="educational">
-                <div class="educational__container">
-                    <h2 class="educational__title">Sistema Binário, Bit e Byte</h2>
+    <div class="educational-content content">
+        <section id="educational" class="educational">
+            <div class="educational__container">
+                <h2 class="educational__title">Sistema Binário, Bit e Byte</h2>
 
-                    <article class="educational__wrapper">
-                        <div class="educational__content">
-                            <h3 class="educational__subtitle">1. O Sistema Binário: A Linguagem Elétrica</h3>
-                            <p class="educational__text">
-                                No nível mais fundamental, o processador de um computador é composto por bilhões de
-                                micro-interruptores chamados <b>transistores</b>. Como um interruptor de luz, eles só
-                                possuem dois estados físicos: <b>ligado</b> ou <b>desligado</b>.
-                            </p>
-                            <p class="educational__text">
-                                Para traduzir isso em dados, atribuímos o valor <b>1</b> para a presença de eletricidade
-                                e <b>0</b> para a ausência. Enquanto nós usamos o sistema decimal (base 10), as máquinas
-                                utilizam a <b>Base 2</b>. Toda imagem, vídeo ou som que você vê na tela é, no fundo, uma
-                                sequência astronômica desses dois dígitos.
-                            </p>
-                        </div>
-                        <img src="./assets/images/partials/educational/binary-code.svg"
-                            alt="Representação de código binário" class="educational__img">
-                    </article>
+                <article class="educational__wrapper">
+                    <div class="educational__content">
+                        <h3 class="educational__subtitle">1. O Sistema Binário: A Linguagem Elétrica</h3>
+                        <p class="educational__text">
+                            No nível mais fundamental, o processador de um computador é composto por bilhões de
+                            micro-interruptores chamados <b>transistores</b>. Como um interruptor de luz, eles só
+                            possuem dois estados físicos: <b>ligado</b> ou <b>desligado</b>.
+                        </p>
+                        <p class="educational__text">
+                            Para traduzir isso em dados, atribuímos o valor <b>1</b> para a presença de eletricidade
+                            e <b>0</b> para a ausência. Enquanto nós usamos o sistema decimal (base 10), as máquinas
+                            utilizam a <b>Base 2</b>. Toda imagem, vídeo ou som que você vê na tela é, no fundo, uma
+                            sequência astronômica desses dois dígitos.
+                        </p>
+                    </div>
+                    <img src="./assets/images/partials/educational/binary-code.svg"
+                        alt="Representação de código binário" class="educational__img">
+                </article>
 
-                    <article class="educational__wrapper">
-                        <div class="educational__content">
-                            <h3 class="educational__subtitle">2. Bit vs Byte: Átomos e Moléculas</h3>
-                            <p class="educational__text">
-                                O <b>Bit</b> (Binary Digit) é a unidade mínima de informação — um único 0 ou 1. Sozinho,
-                                um bit não consegue representar muita coisa. Por isso, a arquitetura moderna agrupa bits
-                                em conjuntos de 8.
-                            </p>
-                            <p class="educational__text">
-                                Um <b>Byte</b> é um grupo de <b>8 bits</b>. Esse agrupamento de 8 posições permite 256
-                                combinações diferentes (2<sup>8</sup>), o que foi historicamente suficiente para mapear
-                                todos os
-                                caracteres essenciais (letras, números e símbolos).
-                            </p>
-                        </div>
-                        <img src="./assets/images/partials/educational/bit-byte.svg"
-                            alt="Esquema de 8 bits formando um byte" class="educational__img educational__img--byte">
-                    </article>
+                <article class="educational__wrapper">
+                    <div class="educational__content">
+                        <h3 class="educational__subtitle">2. Bit vs Byte: Átomos e Moléculas</h3>
+                        <p class="educational__text">
+                            O <b>Bit</b> (Binary Digit) é a unidade mínima de informação — um único 0 ou 1. Sozinho,
+                            um bit não consegue representar muita coisa. Por isso, a arquitetura moderna agrupa bits
+                            em conjuntos de 8.
+                        </p>
+                        <p class="educational__text">
+                            Um <b>Byte</b> é um grupo de <b>8 bits</b>. Esse agrupamento de 8 posições permite 256
+                            combinações diferentes (2<sup>8</sup>), o que foi historicamente suficiente para mapear
+                            todos os
+                            caracteres essenciais (letras, números e símbolos).
+                        </p>
+                    </div>
+                    <img src="./assets/images/partials/educational/bit-byte.svg"
+                        alt="Esquema de 8 bits formando um byte" class="educational__img educational__img--byte">
+                </article>
 
-                    <article class="educational__wrapper">
-                        <div class="educational__content">
-                            <h3 class="educational__subtitle">3. O Enigma do 1024: Decimal vs. Binário</h3>
-                            <p class="educational__text">
-                                No cotidiano, utilizamos o sistema métrico decimal, onde prefixos como <i>Kilo</i> e
-                                <i>Giga</i> são potências de 10 (10³). No entanto, a computação opera em <b>Base 2</b>,
-                                onde a potência 2<sup>10</sup> resulta em <b>1024</b> — o valor binário mais próximo de
-                                1000. Por conveniência técnica, a indústria adotou o termo "Kilobyte" para esse bloco de
-                                1024 unidades, gerando uma diferença que se acumula exponencialmente conforme a escala
-                                aumenta.
-                            </p>
+                <article class="educational__wrapper">
+                    <div class="educational__content">
+                        <h3 class="educational__subtitle">3. O Enigma do 1024: Decimal vs. Binário</h3>
+                        <p class="educational__text">
+                            No cotidiano, utilizamos o sistema métrico decimal, onde prefixos como <i>Kilo</i> e
+                            <i>Giga</i> são potências de 10 (10³). No entanto, a computação opera em <b>Base 2</b>,
+                            onde a potência 2<sup>10</sup> resulta em <b>1024</b> — o valor binário mais próximo de
+                            1000. Por conveniência técnica, a indústria adotou o termo "Kilobyte" para esse bloco de
+                            1024 unidades, gerando uma diferença que se acumula exponencialmente conforme a escala
+                            aumenta.
+                        </p>
 
-                            <p class="educational__text">
-                                Isso explica a famosa confusão de armazenamento: fabricantes de HDs vendem 500 GB
-                                baseando-se em bilhões de bytes (decimal), mas o sistema operacional pensa de forma
-                                binária e divide esse valor por 1024<sup>3</sup>, resultando em cerca de 465 GiB. Você
-                                não "perdeu" espaço; seu computador apenas utiliza uma <b>régua de medição diferente</b>
-                                para processar os dados.
-                            </p>
-                        </div>
-                        <img src="./assets/images/partials/educational/hard-disk.svg" alt="Representação de um HD"
-                            class="educational__img">
-                    </article>
-                </div>
-            </section>
-        </div>
-    </section>
+                        <p class="educational__text">
+                            Isso explica a famosa confusão de armazenamento: fabricantes de HDs vendem 500 GB
+                            baseando-se em bilhões de bytes (decimal), mas o sistema operacional pensa de forma
+                            binária e divide esse valor por 1024<sup>3</sup>, resultando em cerca de 465 GiB. Você
+                            não "perdeu" espaço; seu computador apenas utiliza uma <b>régua de medição diferente</b>
+                            para processar os dados.
+                        </p>
+                    </div>
+                    <img src="./assets/images/partials/educational/hard-disk.svg" alt="Representação de um HD"
+                        class="educational__img">
+                </article>
+            </div>
+        </section>
+    </div>
 
     <section class="how" id="how">
         <div class="how-content content">

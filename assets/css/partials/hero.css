@@ -1,27 +1,21 @@
-/* ==============================
-   HERO SECTION
-   ============================== */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 40vw; /* Respiro para o header fixo */
+  padding-top: 40vw;
   overflow: hidden;
-  background: var(--main-bg-color); /* Fundo sólido para destacar o 3D */
+  background: var(--main-bg-color);
 }
 
 .hero-container {
   display: flex;
-  flex-direction: column; /* Mobile: um embaixo do outro */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
   width: 100%;
 }
 
-/* ==============================
-   BLOCO 1: TEXTO E CONTEÚDO
-   ============================== */
 .hero__content {
   color: var(--main-txt-color);
   text-align: center;
@@ -31,14 +25,11 @@
 
 .hero__title {
   font-family: var(--primary-font);
-  font-size: clamp(2rem, 8vw, 4rem); /* Maior e mais impactante */
+  font-size: clamp(2rem, 8vw, 4rem);
   font-weight: 800;
   line-height: 1.1;
 }
 
-/* ==============================
-   BOTÃO PRINCIPAL (Estilizado)
-   ============================== */
 .hero__btn {
   font-size: 1.125rem;
   background: var(--gradient-color);
@@ -48,15 +39,14 @@
   color: #fff;
   font-weight: bold;
   display: inline-block;
-  position: relative; /* Necessário para o efeito interno */
-  overflow: hidden; /* Esconde o brilho que sai das bordas */
+  position: relative;
+  overflow: hidden;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 8px 15px rgba(37, 99, 235, 0.2);
   margin-top: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* O "Brilho" que passa pelo botão */
 .hero__btn::before {
   content: "";
   position: absolute;
@@ -75,11 +65,10 @@
 
 .hero__btn:hover {
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.5); /* Glow mais forte */
-  letter-spacing: 1px; /* Dá uma leve expandida no texto */
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.5);
+  letter-spacing: 1px;
 }
 
-/* Dispara o brilho no hover */
 .hero__btn:hover::before {
   left: 100%;
 }
@@ -88,13 +77,10 @@
   transform: translateY(-2px) scale(0.98);
 }
 
-/* ==============================
-   BLOCO 2: ELEMENTO 3D (Spline)
-   ============================== */
 .hero__visual {
   flex: 1;
   width: 100%;
-  height: 450px; /* Altura para o robô no mobile */
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,9 +91,6 @@
   height: 100% !important;
 }
 
-/* ==============================
-   MEDIA QUERIES - TABLET
-   ============================== */
 @media (min-width: 48rem) {
   .hero {
     padding-top: 5rem;
@@ -120,12 +103,9 @@
   }
 }
 
-/* ==============================
-   MEDIA QUERIES - DESKTOP
-   ============================== */
 @media (min-width: 64rem) {
   .hero-container {
-    flex-direction: row; /* Lado a lado no desktop */
+    flex-direction: row;
     text-align: left;
     gap: 4rem;
   }
@@ -140,6 +120,6 @@
   }
 
   .hero__visual {
-    height: 650px; /* Robô ganha mais presença */
+    height: 650px;
   }
 }

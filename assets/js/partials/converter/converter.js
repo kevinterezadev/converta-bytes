@@ -7,6 +7,10 @@ converterForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const inputValue = Number(document.getElementById("value").value);
+  if (inputValue > 9999999999) {
+    alert(`🧐 Opa! Esse número é maior que o universo. Digite algo menor.`);
+    return;
+  }
   const selectedUnit = document.getElementById("unit").value;
 
   const units = {
@@ -74,6 +78,10 @@ function formatTechnicalResult(value) {
 }
 
 function formatHumanReadable(value) {
+  if (value >= 1e24) return (value / 1e24).toFixed(1) + " Septi";
+  if (value >= 1e21) return (value / 1e21).toFixed(1) + " Sexti";
+  if (value >= 1e18) return (value / 1e18).toFixed(1) + " Qui";
+  if (value >= 1e15) return (value / 1e15).toFixed(1) + " Qua";
   if (value >= 1e12) return (value / 1e12).toFixed(1) + " Tri";
   if (value >= 1e9) return (value / 1e9).toFixed(1) + " Bi";
   if (value >= 1e6) return (value / 1e6).toFixed(1) + " Mi";
