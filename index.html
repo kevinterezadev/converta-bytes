@@ -2,7 +2,6 @@
 <html lang="pt-br">
 
 <head>
-    <!-- Metatags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
@@ -11,42 +10,42 @@
         content="conversor de armazenamento, bytes, kilobytes, megabytes, gigabytes, sistema binário, 1024, conversão de unidades, tecnologia" />
     <meta name="author" content="@kevinterezadev" />
 
-    <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon" />
 
-    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
 
-    <!-- CSS e JS -->
     <link rel="stylesheet" href="./assets/css/index.css" />
     <script src="./assets/js/index.js" defer></script>
 
-    <!-- Título -->
     <title>ConvertaBytes — Conversor de Unidades de Armazenamento</title>
 </head>
 
 <body>
 
-    <!-- ==============================
-         Header / Navegação
-         ============================== -->
     <header class="header">
         <div class="header-content content">
-            <h1 class="header__logo">Converta<span class="header__logo--blue">Bytes</span></h1>
+            <div class="header__brand">
+                <img src="./assets/images/logo.svg" class="header__icon" aria-hidden="true">
+                <h1 class="header__logo">ConvertaBytes</h1>
+            </div>
             <nav>
                 <ul class="header__list" id="nav-list">
                     <li class="header__item"><a href="#home" class="header__link">Início</a></li>
                     <li class="header__item"><a href="#conversor" class="header__link">Conversor</a></li>
-                    <li class="header__item"><a href="#works" class="header__link">Como funciona?</a></li>
+                    <li class="header__item"><a href="#educational" class="header__link">Sistema Binário, Bit e Byte</a>
+                    </li>
+                    <li class="header__item"><a href="#how" class="header__link">Como funciona a conversão?</a>
+                    </li>
                 </ul>
             </nav>
             <button class="header__hamburguer" id="hamburguer" aria-label="Abrir menu">
@@ -57,34 +56,37 @@
         </div>
     </header>
 
-    <!-- ==============================
-         Hero Section
-         ============================== -->
     <section class="hero" id="home">
-        <div class="hero-content content">
-            <h1 class="hero__title">ConvertaBytes</h1>
-            <p class="hero__text">Aprenda como e converta Bytes, KB, MB, GB e TB de forma rápida e intuitiva.</p>
-            <a href="#conversor" class="hero__btn">Converter Agora</a>
+        <div class="hero-container content">
+            <div class="hero__content">
+                <h2 class="hero__title">Transformando a complexidade do sistema binário em aprendizado prático.</h2>
+                <a href="#conversor" class="hero__btn">Ir para o Conversor</a>
+            </div>
+            <div class="hero__visual">
+                <spline-viewer class="robot-3d"
+                    url="https://prod.spline.design/kmBtRtDyuDzM5z6y/scene.splinecode"></spline-viewer>
+            </div>
         </div>
     </section>
 
-    <!-- ==============================
-         Conversor Section
-         ============================== -->
     <main class="conversor" id="conversor">
         <div class="conversor-content content">
             <h2 class="conversor__title">Conversor de unidades de armazenamento</h2>
             <p class="conversor__text">Digite o <b>valor</b>, selecione a <b>unidade</b> e clique em
-                “<b>Calcular</b>”.<br>O resultado aparece automaticamente em todas as outras unidades.</p>
-            <form id="conversor" class="conversor__form">
+                <b>“Calcular”</b>. O resultado aparece automaticamente em todas as outras unidades.
+            </p>
+
+            <form id="conversor-form" class="conversor__form">
                 <fieldset class="conversor__fieldset">
+
                     <div class="conversor__field">
-                        <label for="value" class="conversor__label">Valor dos dados</label>
-                        <input type="number" id="value" class="conversor__input" placeholder="Ex: 500" required min="1">
+                        <label for="value" class="conversor__label">Valor</label>
+                        <input type="number" id="value" class="conversor__input" placeholder="Ex: 512" min="1" required>
                     </div>
+
                     <div class="conversor__field">
-                        <label aria-hidden="true" class="conversor__label--invisible">&nbsp;</label>
-                        <select id="unit" class="conversor__select" required>
+                        <label for="unit" class="conversor__label">De:</label>
+                        <select id="unit" class="conversor__select">
                             <option value="bit">Bit (b)</option>
                             <option value="byte">Byte (B)</option>
                             <option value="kb">Kilobyte (KB)</option>
@@ -97,10 +99,12 @@
                             <option value="yb">Yottabyte (YB)</option>
                         </select>
                     </div>
+
                     <div class="conversor__field">
-                        <label aria-hidden="true" class="conversor__label--invisible">&nbsp;</label>
-                        <input type="submit" value="Calcular" class="conversor__btn">
+                        <label class="conversor__label" style="opacity:0; pointer-events:none;">&nbsp;</label>
+                        <button type="submit" class="conversor__btn">Calcular</button>
                     </div>
+
                 </fieldset>
             </form>
             <h2 class="conversor__subtitle">Resultados</h2>
@@ -150,70 +154,116 @@
                     <td class="conversor__cell conversor__cell--value" data-unit="yb">-</td>
                 </tr>
             </table>
+            <div class="equivalence">
+                <h3 class="equivalence__title">O que são <span id="equivalence__title--data">0 MB</span>?</h3>
+                <div class="equivalence__grid">
+                    <div class="equivalence__card">
+                        <span class="equivalence__label">Fotos (8MP)</span>
+                        <p class="equivalence__value" data-equiv="photos">0</p>
+                    </div>
+                    <div class="equivalence__card">
+                        <span class="equivalence__label">Músicas (MP3)</span>
+                        <p class="equivalence__value" data-equiv="songs">0</p>
+                    </div>
+                    <div class="equivalence__card">
+                        <span class="equivalence__label">Videos (Full HD)</span>
+                        <p class="equivalence__value" data-equiv="videos">0</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
-    <!-- ==============================
-         Works Section
-         ============================== -->
-    <section class="works" id="works">
-        <div class="works-content content">
-            <h2 class="works__title">Como funciona a conversão de unidades?</h2>
+    <div class="educational-content content">
+        <section id="educational" class="educational">
+            <div class="educational__container">
+                <h2 class="educational__title">Sistema Binário, Bit e Byte</h2>
 
-            <!-- ==============================
-             Artigo 1 - Sistema Binário
-             ============================== -->
-            <article class="works__wrapper">
-                <div class="works__content">
-                    <h3 class="works__subtitle">O sistema binário</h3>
-                    <p class="works__text">
-                        Computadores trabalham apenas com <b>0</b> e <b>1</b>, o <b>sistema binário</b>. Por isso, as
-                        medidas de armazenamento seguem <b>potências de 2</b>, e não de 10 como no sistema decimal que
-                        usamos no
-                        dia a dia. É daqui que surge o número 1024, pois: <b>1024 = 2¹⁰</b>. Ou seja, cada unidade (KB,
-                        MB, GB…) é
-                        <b>1024 vezes</b> maior que a anterior porque elas seguem a potência de 2¹⁰, e não a potência de
-                        10.
-                    </p>
-                </div>
-                <img src="./assets/images/partials/works/math.svg" alt="Ilustração de um estudante de exatas"
-                    class="works__img">
-            </article>
+                <article class="educational__wrapper">
+                    <div class="educational__content">
+                        <h3 class="educational__subtitle">1. O Sistema Binário: A Linguagem Elétrica</h3>
+                        <p class="educational__text">
+                            No nível mais fundamental, o processador de um computador é composto por bilhões de
+                            micro-interruptores chamados <b>transistores</b>. Como um interruptor de luz, eles só
+                            possuem dois estados físicos: <b>ligado</b> ou <b>desligado</b>.
+                        </p>
+                        <p class="educational__text">
+                            Para traduzir isso em dados, atribuímos o valor <b>1</b> para a presença de eletricidade
+                            e <b>0</b> para a ausência. Enquanto nós usamos o sistema decimal (base 10), as máquinas
+                            utilizam a <b>Base 2</b>. Toda imagem, vídeo ou som que você vê na tela é, no fundo, uma
+                            sequência astronômica desses dois dígitos.
+                        </p>
+                    </div>
+                    <img src="./assets/images/partials/educational/binary-code.svg"
+                        alt="Representação de código binário" class="educational__img">
+                </article>
 
-            <!-- ==============================
-             Artigo 2 - Cálculo do Sistema
-             ============================== -->
-            <article class="works__wrapper">
-                <div class="works__content">
-                    <h3 class="works__subtitle">Como o sistema faz o cálculo?</h3>
-                    <p class="works__text">O sistema recebe o <b>valor</b> digitado, identifica a <b>unidade</b>
-                        escolhida e primeiro transforma tudo em <b>bytes</b>, que é a base das medidas de armazenamento
-                        usadas no dia a dia.
-                        A partir daí, ele aplica a lógica binária, <b>dividindo ou multiplicando por 1024</b> para gerar
-                        KB, MB, GB e etc. Para mostrar o valor em bits, o <b>programa apenas multiplica os bytes por
-                            8</b>.
-                        Assim, todas as conversões são calculadas de forma rápida, organizada e precisa.</p>
-                </div>
-                <img src="./assets/images/partials/works/system.svg" alt="Ilustração de um usuário de computador"
-                    class="works__img">
-            </article>
+                <article class="educational__wrapper">
+                    <div class="educational__content">
+                        <h3 class="educational__subtitle">2. Bit vs Byte: Átomos e Moléculas</h3>
+                        <p class="educational__text">
+                            O <b>Bit</b> (Binary Digit) é a unidade mínima de informação — um único 0 ou 1. Sozinho,
+                            um bit não consegue representar muita coisa. Por isso, a arquitetura moderna agrupa bits
+                            em conjuntos de 8.
+                        </p>
+                        <p class="educational__text">
+                            Um <b>Byte</b> é um grupo de <b>8 bits</b>. Esse agrupamento de 8 posições permite 256
+                            combinações diferentes (2<sup>8</sup>), o que foi historicamente suficiente para mapear
+                            todos os
+                            caracteres essenciais (letras, números e símbolos).
+                        </p>
+                    </div>
+                    <img src="./assets/images/partials/educational/bit-byte.svg"
+                        alt="Esquema de 8 bits formando um byte" class="educational__img educational__img--byte">
+                </article>
 
-            <img src="./assets/images/partials/works/conversion.svg" alt="Guia visual de como realizar o cálculo"
-                class="works__guide">
+                <article class="educational__wrapper">
+                    <div class="educational__content">
+                        <h3 class="educational__subtitle">3. O Enigma do 1024: Decimal vs. Binário</h3>
+                        <p class="educational__text">
+                            No cotidiano, utilizamos o sistema métrico decimal, onde prefixos como <i>Kilo</i> e
+                            <i>Giga</i> são potências de 10 (10³). No entanto, a computação opera em <b>Base 2</b>,
+                            onde a potência 2<sup>10</sup> resulta em <b>1024</b> — o valor binário mais próximo de
+                            1000. Por conveniência técnica, a indústria adotou o termo "Kilobyte" para esse bloco de
+                            1024 unidades, gerando uma diferença que se acumula exponencialmente conforme a escala
+                            aumenta.
+                        </p>
+
+                        <p class="educational__text">
+                            Isso explica a famosa confusão de armazenamento: fabricantes de HDs vendem 500 GB
+                            baseando-se em bilhões de bytes (decimal), mas o sistema operacional pensa de forma
+                            binária e divide esse valor por 1024<sup>3</sup>, resultando em cerca de 465 GiB. Você
+                            não "perdeu" espaço; seu computador apenas utiliza uma <b>régua de medição diferente</b>
+                            para processar os dados.
+                        </p>
+                    </div>
+                    <img src="./assets/images/partials/educational/hard-disk.svg" alt="Representação de um HD"
+                        class="educational__img">
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <section class="how" id="how">
+        <div class="how-content content">
+            <h2 class="how__title">Sistema Binário, Bit e Byte</h2>
+            <p class="how__text">O sistema recebe o <b>valor</b> digitado, identifica a <b>unidade</b>
+                escolhida e primeiro transforma tudo em <b>bytes</b>, que é a base das medidas de armazenamento
+                usadas no dia a dia.
+                A partir daí, ele aplica a lógica binária, <b>dividindo ou multiplicando por 1024</b> para gerar
+                KB, MB, GB e etc. Para mostrar o valor em bits, o <b>programa apenas multiplica os bytes por
+                    8</b>.
+                Assim, todas as conversões são calculadas de forma rápida, organizada e precisa.</p>
+            <img src="./assets/images/partials/how/conversion.svg" alt="Esquema visual da Conversão" class="how__img">
         </div>
     </section>
 
-    <!-- ==============================
-         Footer
-         ============================== -->
     <footer class="footer content">
-        <p class="footer__text">© 2026 ConvertaBytes — Desenvolvido por <a href="https://kevinterezadev.vercel.app/"
+        <p class="footer__text">© 2026 ConvertaBytes — Desenvolvido por <a href="https://kevinterezadev.github.io/"
                 class="footer__link">Kevin Tereza</a></p>
     </footer>
 
-    <!-- ==============================
-         Scripts
-         ============================== -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.77/build/spline-viewer.js"></script>
     <script src="./assets/js/partials/nav/nav.js"></script>
     <script src="./assets/js/partials/converter/converter.js"></script>
 </body>

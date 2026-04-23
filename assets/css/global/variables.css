@@ -6,15 +6,23 @@
   /* ==============================
      TIPOGRAFIA
      ============================== */
-  --primary-font: "Montserrat", sans-serif;
+  --primary-font: "Space Grotesk", sans-serif;
   --secondary-font: "Inter", sans-serif;
+  --numbers-font: "JetBrains Mono", monospace;
 
   /* ==============================
      PALETA DE CORES
      ============================== */
-  --red-color: #d0202e;
-  --blue-color: #1f2c6c;
-  --white-color: #fafafa;
-  --black-color: #0e0e0e;
-  --gray-color: #e6e6e6;
+  --primary-color: #2563eb;
+  --secondary-color: #06b6d4;
+  --accent-color: #7c3aed;
+  --gradient-color: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 50%,
+    var(--accent-color) 100%
+  );
+  --main-bg-color: #0f172a;
+  --sections-bg-color: #1e293b;
+  --main-txt-color: #e2e8f0;
 }
